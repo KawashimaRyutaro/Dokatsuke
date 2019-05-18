@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Intent intent = new Intent();
                 //intent.setClassName(getPackageName(),getPackageName()+".submenuActivity");
-
                 Intent intent = new Intent(getApplication(),submenuActivity.class);
                 startActivity(intent);
             }

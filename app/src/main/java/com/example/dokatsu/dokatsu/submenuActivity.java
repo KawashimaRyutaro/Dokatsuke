@@ -19,7 +19,6 @@ public class submenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Intent intent = new Intent();
                 //intent.setClassName(getPackageName(),getPackageName()+".selectActivity");
-
                 Intent intent = new Intent(getApplication(),selectActivity.class);
                 startActivity(intent);
             }
