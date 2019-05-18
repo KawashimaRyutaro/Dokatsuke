@@ -17,8 +17,9 @@ public class submenuActivity extends AppCompatActivity {
         bt_toselect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClassName(getPackageName(),getPackageName()+".selectActivity");
+                //Intent intent = new Intent();
+                //intent.setClassName(getPackageName(),getPackageName()+".selectActivity");
+                Intent intent = new Intent(getApplication(),selectActivity.class);
                 startActivity(intent);
             }
         });

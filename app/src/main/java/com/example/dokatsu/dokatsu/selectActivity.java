@@ -17,8 +17,9 @@ public class selectActivity extends AppCompatActivity {
         bt_tosyorui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClassName(getPackageName(),getPackageName()+".syoruiActivity");
+                //Intent intent = new Intent();
+               // intent.setClassName(getPackageName(),getPackageName()+".syoruiActivity");
+                Intent intent = new Intent(getApplication(),syoruiActivity.class);
                 startActivity(intent);
             }
         });
