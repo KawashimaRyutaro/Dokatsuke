@@ -19,6 +19,7 @@ public class selectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Intent intent = new Intent();
                // intent.setClassName(getPackageName(),getPackageName()+".syoruiActivity");
+
                 Intent intent = new Intent(getApplication(),syoruiActivity.class);
                 startActivity(intent);
             }
