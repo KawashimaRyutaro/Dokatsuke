@@ -13,6 +13,17 @@ public class selectActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
 
+        Button bt_totablet = findViewById(R.id.button_tablet);
+        bt_totablet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Intent intent = new Intent();
+                // intent.setClassName(getPackageName(),getPackageName()+".syoruiActivity");
+                Intent intent = new Intent(getApplication(),UktkTablet.class);
+                startActivity(intent);
+            }
+        });
+
         Button bt_tosyorui = findViewById(R.id.button_syorui);
         bt_tosyorui.setOnClickListener(new View.OnClickListener() {
             @Override

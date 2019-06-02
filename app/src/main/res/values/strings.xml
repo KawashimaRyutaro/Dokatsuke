@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dokatsu</string>
+    <string name="uktk_setumei">ご記入をお願いします</string>
+    <string name="kinyu_name">氏名</string>
+    <string name="kinyu_group">所属</string>
+    <string name="Raihosaki">来訪先</string>
+    <string name="okButton">決定</string>
 </resources>

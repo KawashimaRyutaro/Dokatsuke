@@ -25,6 +25,7 @@
         <activity android:name=".submenuActivity"></activity>
         <activity android:name=".selectActivity"></activity>
         <activity android:name=".syoruiActivity"></activity>
+        <activity android:name=".UktkTablet"></activity>
     </application>
 
 </manifest>
