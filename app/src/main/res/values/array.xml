@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="visit_destination">
+        <item></item>
+        <item>明治 一郎</item>
+        <item>大正 二郎</item>
+        <item>昭和 三郎</item>
+        <item>平成 四郎</item>
+        <item>令和 五郎</item>
+        <item>上記以外</item>
+    </string-array>
+</resources>
