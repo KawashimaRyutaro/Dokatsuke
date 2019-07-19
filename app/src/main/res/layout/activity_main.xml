@@ -6,62 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/タイトル"
-        android:layout_width="625dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="SYSTEMS"
-        android:textColor="@android:color/background_dark"
-        android:textSize="130sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.constraint.Guideline
+    android:id="@+id/horizontal_guideline_1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.10"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
 
     <TextView
-        android:id="@+id/タイトル2"
-        android:layout_width="490dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="392dp"
+        android:id="@+id/タイトル"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="受付ボタンをタッチして下さい。"
+        android:layout_marginBottom="8dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_horizontal"
+        android:text="SYSTEMS"
         android:textColor="@android:color/background_dark"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_1"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/受付_button"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="305dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginTop="256dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:text="受付"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_3"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_2"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_2" />
+
+    <TextView
+        android:id="@+id/タイトル2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:autoSizeTextType="uniform"
+        android:text="受付ボタンをタッチして下さい。"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_guideline_4"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_2"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_3" />
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="258dp"
-        android:layout_height="213dp"
-        android:layout_marginStart="552dp"
-        android:layout_marginLeft="552dp"
-        android:layout_marginTop="244dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_2"
+        android:adjustViewBounds="true"
         app:srcCompat="@drawable/systems" />
 
 </android.support.constraint.ConstraintLayout>
