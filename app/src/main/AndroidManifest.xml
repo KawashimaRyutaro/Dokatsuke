@@ -13,19 +13,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" android:exported="true">
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:exported="true" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistrationActivity"></activity>
-        <activity android:name=".ViewVisiterActivity"></activity>
-        <activity android:name=".submenuActivity"></activity>
-        <activity android:name=".selectActivity"></activity>
-        <activity android:name=".syoruiActivity"></activity>
-        <activity android:name=".UktkTablet"></activity>
+        <activity android:name=".RegistrationActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".ViewVisiterActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".submenuActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".selectActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".syoruiActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".UktkTablet" android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

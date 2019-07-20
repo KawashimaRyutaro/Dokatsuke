@@ -6,28 +6,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/vertical_guideline_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
     <Button
         android:id="@+id/btnCall"
-        android:layout_width="235dp"
-        android:layout_height="131dp"
-        android:layout_marginStart="364dp"
-        android:layout_marginLeft="364dp"
-        android:layout_marginTop="240dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:maxLines="1"
         android:text="呼出し"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintDimensionRatio="1:0.25"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_3" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="452dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginLeft="252dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:text="受付書類に必要事項を記載し、\n呼出しボタンを押してください。"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:maxLines="2"
         android:textColor="@android:color/black"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_7"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_1" />
 </android.support.constraint.ConstraintLayout>
