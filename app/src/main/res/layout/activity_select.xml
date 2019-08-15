@@ -7,77 +7,57 @@
     android:layout_height="match_parent">
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_1"
+        android:id="@+id/horizontal_guideline_B1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20"/>
+        app:layout_constraintGuide_begin="62dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_2"
+        android:id="@+id/horizontal_guideline_B2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.4" />
+        app:layout_constraintGuide_begin="143dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_"
+        android:id="@+id/horizontal_guideline_B3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_begin="180dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_4"
+        android:id="@+id/horizontal_guideline_B4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7" />
+        app:layout_constraintGuide_begin="280dp" />
+
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_"
+        android:id="@+id/vertical_guideline_B1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.2" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_4"
+        android:id="@+id/vertical_guideline_B2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.48" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_2"
+        android:id="@+id/vertical_guideline_B3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_begin="380dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.55" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_6"
+        android:id="@+id/vertical_guideline_B4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -89,13 +69,15 @@
         android:layout_height="0dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="タブレット入力か書類記載かを選択して下さい。"
+        android:text="受付シートの入力方法を選択して下さい。"
         android:maxLines="1"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_2"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_1"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_1" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B4"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B1"
+        app:layout_constraintHorizontal_bias="0.476"
+        />
 
     <Button
         android:id="@+id/button_tablet"
@@ -104,10 +86,10 @@
         android:autoSizeTextType="uniform"
         android:maxLines="1"
         android:text="タブレット"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_4"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B4"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B2"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B3" />
 
     <Button
         android:id="@+id/button_syorui"
@@ -116,8 +98,8 @@
         android:autoSizeTextType="uniform"
         android:maxLines="1"
         android:text="書類"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_6"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_5"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B4"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B4"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B3"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B3" />
 </android.support.constraint.ConstraintLayout>

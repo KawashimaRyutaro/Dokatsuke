@@ -23,5 +23,12 @@ public class submenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button bt_tocall = findViewById(R.id.button_hitatu);
+//        Callイベントを呼び出す(未実装)
+//        bt_tocall.setOnClickListener((v) {
+//                Intent intent = new Intent(getApplication(),syoruiActivity.class);
+//                startActivity(intent);
+//        });
     }
 }

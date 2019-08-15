@@ -7,172 +7,89 @@
     android:layout_height="match_parent">
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_1"
+        android:id="@+id/horizontal_guideline_A1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_begin="62dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_2"
+        android:id="@+id/horizontal_guideline_A2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_begin="143dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_3"
+        android:id="@+id/horizontal_guideline_A3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_begin="180dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_4"
+        android:id="@+id/horizontal_guideline_A4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_begin="280dp" />
+
 
     <android.support.constraint.Guideline
-        android:id="@+id/horizontal_guideline_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_2"
+        android:id="@+id/vertical_guideline_A1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.2" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_3"
+        android:id="@+id/vertical_guideline_A2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.48" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_7"
+        android:id="@+id/vertical_guideline_A3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_begin="380dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_4"
+        android:id="@+id/vertical_guideline_A4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.8" />
 
-
-    <android.support.constraint.Guideline
-        android:id="@+id/vertical_guideline_5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
-
     <Button
         android:id="@+id/button_uti"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="打合せ"
+        android:text="打ち合わせ\nセミナー"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:maxLines="1"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_3"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_2" />
-
-    <Button
-        android:id="@+id/button_smna"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="セミナー"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:maxLines="1"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_3" />
+        android:maxLines="2"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A3"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A4"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A1"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A2"
+        />
 
     <Button
         android:id="@+id/button_hitatu"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="配達"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:maxLines="1"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_5"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_3"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_4" />
-
-    <Button
-        android:id="@+id/button_snot"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="その他"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_5"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_4"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_4" />
-
-    <Button
-        android:id="@+id/button_mnst"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="面接"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_4"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_4"
-        app:layout_constraintHorizontal_bias="0.58"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_3" />
-
-    <Button
-        android:id="@+id/button_sydn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:maxLines="1"
-        android:text="商談"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_3"
-        app:layout_constraintDimensionRatio="1:0.25"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_4"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_7"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_2" />
+        android:maxLines="2"
+        android:text="配達\nその他"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A3"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A4"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A3"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A4"
+        />
 
     <TextView
         android:id="@+id/textView"
@@ -183,9 +100,9 @@
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_2"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_4"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A4"
         app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_1" />
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A1"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A1" />
 </android.support.constraint.ConstraintLayout>
