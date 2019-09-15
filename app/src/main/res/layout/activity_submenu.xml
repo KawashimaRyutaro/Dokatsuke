@@ -32,8 +32,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_A5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_begin="280dp" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_A6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="360dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_A1"
@@ -47,14 +60,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_begin="220dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_A3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="380dp" />
+        app:layout_constraintGuide_begin="480dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_A4"
@@ -67,14 +80,13 @@
         android:id="@+id/button_uti"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="打ち合わせ\nセミナー"
+        android:text="打ち合わせ / セミナー"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:maxLines="2"
         app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A3"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A4"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A1"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A2"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A3"
         />
 
     <Button
@@ -83,12 +95,11 @@
         android:layout_height="0dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:maxLines="2"
-        android:text="配達\nその他"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A3"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A4"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A3"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A4"
+        android:text="上記以外"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A5"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A6"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A3"
         />
 
     <TextView

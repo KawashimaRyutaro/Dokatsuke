@@ -111,6 +111,6 @@
         app:layout_constraintStart_toStartOf="@+id/vertical_guideline_2"
         app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_2"
         android:adjustViewBounds="true"
-        app:srcCompat="@drawable/systems" />
+        app:srcCompat="@mipmap/systems_2" />
 
 </android.support.constraint.ConstraintLayout>
