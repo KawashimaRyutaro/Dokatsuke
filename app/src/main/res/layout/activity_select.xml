@@ -46,7 +46,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_B5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintGuide_begin="280dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontal_guideline_B6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="360dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_B0"
@@ -67,14 +81,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.48" />
+        app:layout_constraintGuide_begin="220dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_B3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="380dp" />
+        app:layout_constraintGuide_begin="480dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/vertical_guideline_B4"
@@ -107,8 +121,8 @@
         android:maxLines="1"
         android:text="タブレット"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B4"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B2"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B1"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B3"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B2"
         app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B3" />
 
     <Button
@@ -118,8 +132,8 @@
         android:autoSizeTextType="uniform"
         android:maxLines="1"
         android:text="書類"
-        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B4"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B4"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B3"
-        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B3" />
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_B6"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_B3"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_B2"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_B5" />
 </android.support.constraint.ConstraintLayout>
