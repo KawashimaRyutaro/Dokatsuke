@@ -248,7 +248,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/colorList"
-        android:entries="@array/visit_destination"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_C5"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_C4"

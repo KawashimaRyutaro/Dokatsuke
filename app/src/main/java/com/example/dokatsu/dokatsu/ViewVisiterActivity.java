@@ -35,6 +35,7 @@ public class ViewVisiterActivity extends AppCompatActivity {
 
     private void GetVisiterData()
     {
+        /*
         //ファイルが存在しない場合は処理を行わない
         File file = getBaseContext().getFileStreamPath("Visiter");
         if(!file.exists()) return;
@@ -56,5 +57,6 @@ public class ViewVisiterActivity extends AppCompatActivity {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        */
     }
 }

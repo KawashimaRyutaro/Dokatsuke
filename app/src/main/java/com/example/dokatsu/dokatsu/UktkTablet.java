@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class UktkTablet extends AppCompatActivity {
 
@@ -20,5 +22,16 @@ public class UktkTablet extends AppCompatActivity {
                 //呼び出し中の画面に遷移
             }
         });
+
+        //社員選択リスト
+        Spinner spinner = (Spinner)findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        for(EmployeeBean _Emp : EmployeeXML._EmployeeList)
+        {
+            adapter.add(_Emp.getName());
+        }
+        spinner.setAdapter(adapter);
+
     }
 }
