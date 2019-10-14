@@ -16,6 +16,9 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
     //テーブルレイアウト
     TableLayout _tableLayout;
 
+    //パディングの幅
+    final int PADDING_WIDTH = 20;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -30,18 +33,40 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
         _tableLayout = findViewById(R.id.table1);
         _tableLayout.removeAllViews();
 
+        //タイトル部の作成
+        TableRow _HeadRow = new TableRow(this);
+
+        TextView _HeadName = new TextView(this);
+        _HeadName.setText(String.format("%-"+PADDING_WIDTH+"s","名前"));
+        _HeadRow.addView(_HeadName);
+
+        TextView _HeadFurigana = new TextView(this);
+        _HeadFurigana.setText(String.format("%-"+PADDING_WIDTH+"s","ふりがな"));
+        _HeadRow.addView(_HeadFurigana);
+
+        TextView _HeadId = new TextView(this);
+        _HeadId.setText(String.format("%-"+PADDING_WIDTH+"s","電話番号"));
+        _HeadRow.addView(_HeadId);
+
+        _tableLayout.addView(_HeadRow);
+
         for(final EmployeeBean _Emp : EmployeeXML._EmployeeList)
         {
             TableRow _Row = new TableRow(this);
-            TextView _Id =new TextView(this);
-            _Id.setText(_Emp.getId());
-            _Row.addView(_Id);
-            TextView _Furigana =new TextView(this);
-            _Furigana.setText(_Emp.getFurigana());
-            _Row.addView(_Furigana);
+
+
             TextView _Name =new TextView(this);
-            _Name.setText(_Emp.getName());
+            _Name.setText(String.format("%-"+PADDING_WIDTH+"s",_Emp.getName()));
             _Row.addView(_Name);
+
+            TextView _Furigana =new TextView(this);
+            _Furigana.setText(String.format("%-"+PADDING_WIDTH+"s",_Emp.getFurigana()));
+            _Row.addView(_Furigana);
+
+            TextView _Id =new TextView(this);
+            _Id.setText(String.format("%-"+PADDING_WIDTH+"s",_Emp.getId()));
+            _Row.addView(_Id);
+
             Button _Delete = new Button(this);
             _Delete.setText("削除");
             _Delete.setOnClickListener(new View.OnClickListener(){
@@ -53,6 +78,7 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
                 }
             });
             _Row.addView(_Delete);
+
             _tableLayout.addView(_Row);
         }
 

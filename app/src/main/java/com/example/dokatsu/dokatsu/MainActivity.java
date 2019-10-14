@@ -31,7 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         findViewById(R.id.imageView).setOnClickListener(this);
-        EmployeeXML._File = getApplicationContext().getFileStreamPath("Employee.xml");
+
+        EmployeeXML._File = new File(getBaseContext().getExternalFilesDir(null).getPath() +"/Employee.xml");
+        EmployeeXML.loadFile(getBaseContext());
     }
 
     /**
