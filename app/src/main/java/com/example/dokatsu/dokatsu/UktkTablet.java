@@ -1,5 +1,6 @@
 package com.example.dokatsu.dokatsu;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,15 @@ public class UktkTablet extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.uktktablet);
+
+        Button  bt_modoru2= findViewById(R.id.戻る2);
+        bt_modoru2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(Activity.RESULT_CANCELED);
+                finish();
+            }
+        });
 
         // 決定ボタン
         Button sendButton1 = findViewById(R.id.button);
