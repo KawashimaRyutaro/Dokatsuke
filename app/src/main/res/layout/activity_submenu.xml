@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <android.support.constraint.Guideline
         android:id="@+id/horizontal_guideline_A2"
@@ -105,9 +105,9 @@
         android:maxLines="1"
         android:text="戻る"
         app:layout_constraintBottom_toTopOf="@+id/horizontal_guideline_A1"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A0"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline_A0_1"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A0_1"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline_A0"
         app:layout_constraintTop_toTopOf="@+id/horizontal_guideline_A0"
         app:layout_constraintVertical_bias="1.0" />
 
