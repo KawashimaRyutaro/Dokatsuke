@@ -29,6 +29,15 @@ public class submenuActivity extends AppCompatActivity {
             }
         });
 
+        //戻るボタン押下時
+        Button bt_return = findViewById(R.id.戻る2);
+        bt_return.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         //電話ボタンのリスナー設定
         Button bt_tocall = findViewById(R.id.button_hitatu);
         bt_tocall.setOnClickListener(new View.OnClickListener(){

@@ -15,6 +15,15 @@ public class UktkTablet extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.uktktablet);
 
+        //戻るボタン押下時
+        Button bt_return = findViewById(R.id.戻る2);
+        bt_return.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         // 決定ボタン
         Button sendButton1 = findViewById(R.id.button);
         sendButton1.setOnClickListener(new View.OnClickListener() {
