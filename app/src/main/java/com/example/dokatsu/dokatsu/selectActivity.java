@@ -1,6 +1,5 @@
 package com.example.dokatsu.dokatsu;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,15 +12,6 @@ public class selectActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select);
-
-        Button  bt_modoru2= findViewById(R.id.戻る2);
-        bt_modoru2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(Activity.RESULT_CANCELED);
-                finish();
-            }
-        });
 
         Button bt_totablet = findViewById(R.id.button_tablet);
         bt_totablet.setOnClickListener(new View.OnClickListener() {

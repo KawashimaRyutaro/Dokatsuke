@@ -1,7 +1,6 @@
 package com.example.dokatsu.dokatsu;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -18,16 +17,6 @@ public class syoruiActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syorui);
-
-        Button  bt_modoru2= findViewById(R.id.戻る2);
-        bt_modoru2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(Activity.RESULT_CANCELED);
-                finish();
-            }
-        });
-
         //電話ボタンのリスナー設定
         Button btnCall = findViewById(R.id.btnCall);
         btnCall.setOnClickListener(new View.OnClickListener(){

@@ -19,6 +19,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
+        /*
         Button sendRegistration = findViewById(R.id.btnRegist);
         sendRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,5 +49,6 @@ public class RegistrationActivity extends AppCompatActivity {
                 }
             }
         });
+        */
     }
 }
