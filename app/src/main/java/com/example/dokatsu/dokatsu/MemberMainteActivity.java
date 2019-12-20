@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class MemberMainteActivity extends AppCompatActivity implements  View.OnClickListener
 {
@@ -54,7 +56,6 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
         {
             TableRow _Row = new TableRow(this);
 
-
             TextView _Name =new TextView(this);
             _Name.setText(String.format("%-"+PADDING_WIDTH+"s",_Emp.getName()));
             _Row.addView(_Name);
@@ -72,9 +73,20 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
             _Delete.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    EmployeeXML._EmployeeList.remove(_Emp);
-                    EmployeeXML.saveFile();
-                    AddEmpRowToTblLayout();
+                    new AlertDialog.Builder(MemberMainteActivity.this)
+                            .setTitle("警告")
+                            .setMessage("削除しますか")
+                            .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    // OK button pressed
+                                    EmployeeXML._EmployeeList.remove(_Emp);
+                                    EmployeeXML.saveFile();
+                                    AddEmpRowToTblLayout();
+                                }
+                            })
+                            .setNegativeButton("Cancel", null)
+                            .show();
                 }
             });
             _Row.addView(_Delete);
@@ -93,12 +105,23 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
         switch (view.getId())
         {
             case R.id.ButtonAddUpdate:
-                String id = ((EditText)findViewById(R.id.editText_ID)).getText().toString();
-                String Name = ((EditText)findViewById(R.id.editText_Name)).getText().toString();
-                String furigana = ((EditText)findViewById(R.id.editText_Furigana)).getText().toString();
-                EmployeeXML._EmployeeList.add(new EmployeeBean(id,furigana,Name));
-                EmployeeXML.saveFile();
-                AddEmpRowToTblLayout();
+                new AlertDialog.Builder(MemberMainteActivity.this)
+                        .setTitle("警告")
+                        .setMessage("追加しますか")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // OK button pressed
+                                String id = ((EditText)findViewById(R.id.editText_ID)).getText().toString();
+                                String Name = ((EditText)findViewById(R.id.editText_Name)).getText().toString();
+                                String furigana = ((EditText)findViewById(R.id.editText_Furigana)).getText().toString();
+                                EmployeeXML._EmployeeList.add(new EmployeeBean(id,furigana,Name));
+                                EmployeeXML.saveFile();
+                                AddEmpRowToTblLayout();
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .show();
                 break;
         }
     }
