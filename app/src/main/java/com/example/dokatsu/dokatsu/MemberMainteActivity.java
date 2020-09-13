@@ -2,14 +2,20 @@ package com.example.dokatsu.dokatsu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MemberMainteActivity extends AppCompatActivity implements  View.OnClickListener
 {
@@ -105,6 +111,28 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
         switch (view.getId())
         {
             case R.id.ButtonAddUpdate:
+
+                // 入力チェック
+                List<String> validationList = onClickVaridation();
+                // エラーがあれば、警告メッセージを出力
+                if (validationList != null && validationList.size() != 0) {
+                    StringBuilder sb = new StringBuilder();
+                    int loopCount = 1;
+                    for (String messageList : validationList) {
+                        sb.append(messageList);
+                        if (loopCount != validationList.size()) {
+                            sb.append("\n");
+                        }
+                    }
+                    new AlertDialog.Builder(MemberMainteActivity.this)
+                            .setTitle("警告")
+                            .setMessage(sb.toString())
+                            .setPositiveButton("OK", null)
+                            .show();
+                    break;
+
+                }
+
                 new AlertDialog.Builder(MemberMainteActivity.this)
                         .setTitle("警告")
                         .setMessage("追加しますか")
@@ -124,5 +152,38 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
                         .show();
                 break;
         }
+    }
+
+    public List<String> onClickVaridation() {
+        // 返却値のリストを作成
+        List<String> varidationList = new ArrayList<String>();
+
+        // ------------------
+        // 名前の入力チェック
+        // ------------------
+        // 未入力チェック
+        if (TextUtils.isEmpty(((EditText)findViewById(R.id.editText_Name)).getText().toString())) {
+            varidationList.add("名前が未入力です");
+        }
+        // ------------------
+        // ふりがなの入力チェック
+        // ------------------
+        // 未入力チェック
+        if (TextUtils.isEmpty(((EditText)findViewById(R.id.editText_Furigana)).getText().toString())) {
+            varidationList.add("ふりがなが未入力です");
+        }
+
+        // ------------------
+        // 電話番号の入力チェック
+        // ------------------
+        // 未入力チェック
+        if (TextUtils.isEmpty(((EditText)findViewById(R.id.editText_ID)).getText().toString())) {
+            varidationList.add("電話番号が未入力です");
+            // 数値チェック
+        } else if (!TextUtils.isDigitsOnly(((EditText)findViewById(R.id.editText_ID)).getText().toString())) {
+            varidationList.add("電話番号に数値以外の文字が入力されています");
+        }
+
+        return varidationList;
     }
 }
