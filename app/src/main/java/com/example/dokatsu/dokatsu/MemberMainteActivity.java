@@ -32,6 +32,15 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainte);
+        //戻るボタン押下時
+        Button bt_return = findViewById(R.id.戻る2);
+        bt_return.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         findViewById(R.id.ButtonAddUpdate).setOnClickListener(this);
         AddEmpRowToTblLayout( );
     }
@@ -146,6 +155,9 @@ public class MemberMainteActivity extends AppCompatActivity implements  View.OnC
                                 EmployeeXML._EmployeeList.add(new EmployeeBean(id,furigana,Name));
                                 EmployeeXML.saveFile();
                                 AddEmpRowToTblLayout();
+                                ((EditText)findViewById(R.id.editText_ID)).getText().clear();
+                                ((EditText)findViewById(R.id.editText_Name)).getText().clear();
+                                ((EditText)findViewById(R.id.editText_Furigana)).getText().clear();
                             }
                         })
                         .setNegativeButton("Cancel", null)

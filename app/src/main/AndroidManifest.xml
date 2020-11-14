@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrationActivity" android:screenOrientation="landscape"/>
-        <activity android:name=".MemberMainteActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".MemberMainteActivity" android:screenOrientation="landscape" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ViewVisiterActivity" android:screenOrientation="landscape"/>
         <activity android:name=".submenuActivity" android:screenOrientation="landscape"/>
         <activity android:name=".selectActivity" android:screenOrientation="landscape"/>
